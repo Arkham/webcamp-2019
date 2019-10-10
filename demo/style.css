@@ -1,0 +1,43 @@
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 550px;
+}
+
+.sheet {
+  padding: 15px;
+}
+
+.text {
+  white-space: pre;
+}
+
+.line {
+  margin-bottom: 10px;
+}
+
+.token {
+  border: 1px solid lightblue;
+}
+
+.chord {
+  cursor: pointer;
+  user-select: none;
+}
+
+.chord:hover {
+  opacity: 0.6;
+}
