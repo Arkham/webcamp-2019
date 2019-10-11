@@ -69,11 +69,51 @@ The **[F]**revision that was planted in
 
 ---
 
-# CODING TIME
+## Parsing a blurb of text?
 
 ---
 
-## A simple Elm application
+![inline](images/xkcd.png)
+
+[.footer: [xkcd.com/208](https://xkcd.com/208/)]
+
+---
+
+## /**\\[[ABCDEFG]m?\\]**/
+
+---
+
+## This regex finds chords
+
+---
+
+## But it only<br>understands text
+
+---
+
+## It doesn't _really_<br>understands chords
+
+---
+
+## String **->** [Chord]
+
+---
+
+## String **->** [String]
+
+---
+
+## 😥
+
+---
+
+## 😥[^*]
+
+[^*]: disappointed_but_relieved_face
+
+---
+
+## Let's use Elm<br>and [**elm/parser**](https://github.com/elm/parser)
 
 ---
 
@@ -127,54 +167,6 @@ update msg model =
 
 ---
 
-## Parsing a blurb of text?
-
----
-
-![inline](images/xkcd.png)
-
-[.footer: [xkcd.com/208](https://xkcd.com/208/)]
-
----
-
-## /**\\[[ABCDEFG]m?\\]**/
-
----
-
-## This regex finds chords
-
----
-
-## But it only<br>understands text
-
----
-
-## It doesn't _really_<br>understands chords
-
----
-
-## String **->** [Chord]
-
----
-
-## String **->** [String]
-
----
-
-## 😥
-
----
-
-## 😥[^*]
-
-[^*]: disappointed_but_relieved_face
-
----
-
-## Let's use Elm<br>and [**elm/parser**](https://github.com/elm/parser)
-
----
-
 ## Wishful Programming™[^•]
 
 [^•]: Not actually trademark
@@ -204,7 +196,9 @@ type Chord =
 
 # A Chord, Pt II
 
-[.code-highlight: 1-4][.code-highlight: 1-7]
+[.code-highlight: 1-4]
+
+[.code-highlight: 1-7]
 
 ```elm
 type Quality
@@ -226,7 +220,9 @@ type Chord
 
 ---
 
-[.code-highlight: 1-1][.code-highlight: 1-3]
+[.code-highlight: 1-1]
+
+[.code-highlight: 1-3]
 
 ```elm
 import Parser exposing (Parser)
@@ -238,7 +234,9 @@ chordParser =
 
 ---
 
-[.code-highlight: 1-3][.code-highlight: 1-5]
+[.code-highlight: 1-3]
+
+[.code-highlight: 1-5]
 
 ```elm
 import Parser exposing (Parser)
@@ -254,8 +252,13 @@ chordParser =
 
 ---
 
-[.code-highlight: 1-1][.code-highlight: 1-5]
-[.code-highlight: 1-6][.code-highlight: 1-7]
+[.code-highlight: 1-1]
+
+[.code-highlight: 1-5]
+
+[.code-highlight: 1-6]
+
+[.code-highlight: 1-7]
 
 ```elm
 import Parser exposing (Parser, (|=), (|.))
@@ -269,8 +272,13 @@ chordParser =
 
 ---
 
-[.code-highlight: 1-2][.code-highlight: 1-3]
-[.code-highlight: 1-5][.code-highlight: 1-14]
+[.code-highlight: 1-2]
+
+[.code-highlight: 1-3]
+
+[.code-highlight: 1-5]
+
+[.code-highlight: 1-14]
 
 ```elm
 noteParser : Parser Note
@@ -289,8 +297,14 @@ noteParser =
 
 ---
 
-[.code-highlight: 1-2][.code-highlight: 1-3]
-[.code-highlight: 1-5][.code-highlight: 1-7]
+[.code-highlight: 1-2]
+
+[.code-highlight: 1-3]
+
+[.code-highlight: 1-5]
+
+[.code-highlight: 1-7]
+
 [.code-highlight: 1-9]
 
 ```elm
